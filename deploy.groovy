@@ -31,7 +31,7 @@ job("kube2_groovy"){
         		sudo kubectl create -f /task6/jenkins/deploy.yml
         		POD=$(sudo kubectl get pod -l app=httpd -o jsonpath="{.items[0].metadata.name}")
         		echo $POD
-        		sudo kubectl cp /task6/jenkins/index.php $POD:/var/www/html
+        		sudo kubectl cp /task6/jenkins/index.php $POD:/var/www/html/index.php
     		fi
    	fi
 	''')
