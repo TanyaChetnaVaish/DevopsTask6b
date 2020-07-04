@@ -9,6 +9,10 @@ job("kube1_groovy"){
   triggers {
         		upstream('TheSeedJobTask6', 'SUCCESS')
     			}
+	triggers{
+    gitHubPushTrigger()
+  }
+	
 }
 
 
